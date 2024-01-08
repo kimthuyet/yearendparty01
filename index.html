@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Year End Party Invitation</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
   <style>
+    /* CSS của bạn */
     body {
       font-family: Arial, sans-serif;
       background-image: url('background.jpg'); /* Thay 'background.jpg' bằng tên hình nền của bạn */
@@ -21,9 +24,6 @@
     h1 {
       text-align: center;
     }
-    .event-details {
-      margin-bottom: 20px;
-    }
     img {
       max-width: 100%;
       display: block;
@@ -38,12 +38,33 @@
       <p><strong>Thời gian:</strong> Ngày 31 tháng 12, 2024</p>
       <p><strong>Địa điểm:</strong> Nhà hàng Đỉnh Cao, Số 123, Đường Hạnh Phúc, Thành phố Hạnh Phúc</p>
     </div>
-    <img src="image1.jpg" alt="Event Image 1">
-    <img src="image2.jpg" alt="Event Image 2">
-    <!-- Thêm các đường dẫn đến hình ảnh của bạn, thay 'image1.jpg', 'image2.jpg', ... bằng tên hình ảnh của bạn -->
+    <!-- Thêm một div với class "slick-slider" để chứa slideshow -->
+    <div class="slick-slider">
+      <div><img src="image1.jpg" alt="Event Image 1"></div>
+      <div><img src="image2.jpg" alt="Event Image 2"></div>
+      <div><img src="image3.jpg" alt="Event Image 3"></div>
+      <!-- Thêm các đường dẫn đến các hình ảnh khác vào đây -->
+    </div>
+	<img src="image1.jpg" alt="Event Image 1">
+    <!-- Các thông tin về sự kiện -->
     <p>Hãy đến và chia sẻ niềm vui với chúng tôi trong đêm tiệc cuối năm này!</p>
     <p>Xin vui lòng xác nhận sự tham dự của bạn bằng cách trả lời email này.</p>
     <p>Trân trọng,<br>Ban Tổ Chức Year End Party</p>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slick-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true
+        // Các tùy chọn khác của Slick Slider
+      });
+    });
+  </script>
 </body>
 </html>
